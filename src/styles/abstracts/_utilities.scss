@@ -1,0 +1,167 @@
+.heading-primary {
+  color: $colorPrimario;
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+
+  @include respond(phone) {
+    font-size: 4.5rem;
+  }
+}
+
+.heading-sec {
+  color: $colorPrimario;
+
+  &__mb-bg {
+    margin-bottom: 3rem;
+
+    @include respond(tab-port) {
+      margin-bottom: 8rem;
+    }
+  }
+
+  &__mb-med {
+    margin-bottom: 9rem;
+
+    @include respond(tab-port) {
+      margin-bottom: 8rem;
+    }
+  }
+
+  &__main {
+    display: block;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    position: relative;
+
+    &--lt {
+      color: $colorPrimario;
+
+      &::after {
+        content: '';
+        background: $colorPrimario !important;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: calc(100% + 1.5rem);
+      height: 5px;
+      width: 3rem;
+      background: $colorPrimario;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: $commonBorderRadius;
+
+      @include respond(phone) {
+        top: calc(100% + 1.2rem);
+      }
+    }
+  }
+
+  &__sub {
+    display: block;
+    text-align: center;
+    color: $colorPrimario;
+    font-size: 2rem;
+    font-weight: 500;
+    max-width: 80rem;
+    margin: auto;
+    line-height: 1.6;
+
+    @include respond(phone) {
+      font-size: 1.8rem;
+    }
+
+    &--lt {
+      color: $colorPrimario;
+    }
+  }
+}
+
+.heading-sm {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.main-container {
+  max-width: 120rem;
+  margin: auto;
+  width: 92%;
+}
+
+.btn {
+  background: $colorSecundario;
+  color: $colorPrimario;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+  font-weight: 700;
+  border: none;
+  border-radius: $commonBorderRadius;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.415);
+  transition: transform .3s;
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    color: black;
+    box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.415);
+    ;
+  }
+
+  &--bg {
+    padding: 1.5rem 8rem;
+    font-size: 2rem;
+  }
+
+  &--med {
+    padding: 1.5rem 5rem;
+    font-size: 1.6rem;
+  }
+
+  &--theme {
+    background: $colorPrimario;
+    color: $colorTerciario;
+  }
+
+  &--theme-inv {
+    color: $colorPrimario;
+    background: $colorTerciario;
+    border: 2px solid $colorPrimario;
+    box-shadow: none;
+    padding: calc(1.5rem - 2px) calc(5rem - 2px);
+  }
+}
+
+.sec-pad {
+  padding: 5rem 0;
+
+  @include respond(tab-port) {
+    padding: 6rem 0;
+  }
+}
+
+.text-primary {
+  color: $colorPrimario;
+  font-size: 2.2rem;
+  text-align: center;
+  width: 100%;
+  line-height: 1.6;
+
+  @include respond(phone) {
+    font-size: 2rem;
+  }
+}
+
+
+.d-none {
+  display: none;
+}

@@ -1,0 +1,41 @@
+.about {
+  background: $colorTerciario;
+  padding-top: 10rem;
+
+  &__content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 8rem;
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+      grid-gap: 8rem;
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 3rem;
+
+      @include respond(phone) {
+        font-size: 2.4rem;
+      }
+    }
+
+    &-details-para {
+      font-size: 1.8rem;
+      color: $colorPrimario;
+      max-width: 92%;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+
+      &--hl {
+        font-weight: 700;
+        margin: 0 3px;
+      }
+
+      &:last-child {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+}
