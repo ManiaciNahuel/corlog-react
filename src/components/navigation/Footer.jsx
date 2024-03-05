@@ -56,7 +56,7 @@ export const Footer = () => {
                 />
               </a>
             </div>
-            <a target="_blank" rel="noreferrer" href="https://twitter.com">
+            <a rel="noreferrer" href="./#">
                 <img
                   src={logo}
                   alt="Logo"

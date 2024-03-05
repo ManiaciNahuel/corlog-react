@@ -28,12 +28,12 @@ export const NavBar = () => {
               </a>
             </li>
             <li className="header__link-wrapper">
-              <a href="./#about" className="header__link">
+              <a href="./#section" className="header__link">
                 Section 1{" "}
               </a>
             </li>
             <li className="header__link-wrapper">
-              <a href="./#projects" className="header__link">
+              <a href="./#" className="header__link">
                 Section 2
               </a>
             </li>
