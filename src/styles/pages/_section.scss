@@ -1,5 +1,5 @@
 .section {
-  background: $colorTerciario;
+  background: rgba($colorCuaternario, 0.7);
   padding-top: 15rem;
   margin-top: -90px;
 
@@ -12,11 +12,11 @@
       grid-gap: 8rem;
     }
 
-    &-title {
+    &-subtitle {
       font-weight: 700;
       font-size: 2.8rem;
       margin-bottom: 3rem;
-
+      
       @include respond(phone) {
         font-size: 2.4rem;
       }

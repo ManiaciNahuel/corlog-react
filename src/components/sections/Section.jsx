@@ -10,7 +10,7 @@ export const Section = () => {
         </h2>
         <div className="section__content">
           <div className="section__content-main">
-            <h3 className="section__content-title">Subtitulo 2</h3>
+            <h3 className="section__content-subtitle">Subtitulo 2</h3>
             <div className="section__content-details">
               <p className="section__content-details-para">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, explicabo quae? Eveniet omnis fugiat doloribus laudantium voluptates ab ipsum dolores architecto itaque? Accusamus voluptas, reiciendis rem consequuntur ab explicabo dignissimos!
@@ -26,7 +26,7 @@ export const Section = () => {
        
           </div>
           <div className="section__content-skills">
-            <h3 className="section__content-title">Subtitulo 2</h3>
+            <h3 className="section__content-subtitle">Subtitulo 2</h3>
             <p className="section__content-details-para">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, libero! Excepturi possimus error earum fugiat quo recusandae tempore perspiciatis! Id ad ipsa neque necessitatibus laudantium at esse expedita corrupti doloremque.
               Nam, nobis earum magnam et ipsa voluptates quibusdam molestias quaerat sint! Mollitia molestias alias maxime quibusdam nisi aut delectus ipsam! Quod beatae aspernatur totam blanditiis odio aut doloremque, consequatur nostrum.
