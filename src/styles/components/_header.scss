@@ -1,19 +1,17 @@
 .header {
   position: fixed;
   width: 100%;
-  z-index: 1000;
-  background: rgba($colorTerciario, 0.6);
-  /*  background: linear-gradient(
-      to right,
-      rgba($colorSecundario, 0.8),
-      rgba($colorSecundario, 0.8)
-    ); */
-  box-shadow: 0 10px 10px rgba($colorTerciario, 0.6);
-
+  height: 145px;
+  background-color: $colorPrimario;
+  z-index: 10;
+  border-bottom: solid 3px $colorTerciario;
+  border-radius: 3px;
+  grid-area: header;
+  top: 0px;
   &__content {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; */
     padding: 0.5rem 2rem;
 
     @include respond(tab-port) {
@@ -22,20 +20,13 @@
   }
 
   &__logo-container {
-    width: 40rem;
     display: flex;
-    align-items: center;
-    cursor: pointer;
-    color: $colorPrimario;
-    transition: color 0.3s;
-    &:hover {
-      color: $colorSecundario;
-    }
+    justify-content: center;
+    text-align: center;
+    padding: 3px;
   }
 
   &__logo-img-cont {
-    width: 5rem;
-    height: 4rem;
     border-radius: 50px;
     overflow: hidden;
     margin-right: 1.5rem;
@@ -49,9 +40,8 @@
   }
 
   &__logo-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 360px;
+    aspect-ratio: 18/4;
     object-position: center;
     display: block;
   }
@@ -65,44 +55,59 @@
 
   &__links {
     display: flex;
-
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left: 1rem;
+    padding-top: 10px;
     @include respond(phone) {
       display: none;
     }
   }
 
   &__link {
-    margin: 0rem 1rem;
-    padding: 0.7rem 1rem;
-    display: inline-block;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 4px;
+    border: solid 0.4rem #ffd085b6;
+    background-color: $colorCuaternario;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: transform 3s;
     font-size: 1.6rem;
-    color: $colorPrimario;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 700;
-    transition: color 0.3s;
-    border-radius: $intermediateRadius;
-    transition: transform 0.3s;
-    &:hover {
-      cursor: pointer;
-      background-color: rgba($colorCuaternario, 0.8);
-      transform: translateY(-3px);
-      color: black;
-      box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.415);
-    }
 
     @include respond(tab-port) {
       padding: 3rem 1.8rem;
       font-size: 1.5rem;
     }
   }
+  &__socials {
+    ul {
+      margin-right: 20px;
+      position: fixed;
+      display: flex;
+      flex-direction: row;
+      z-index: 15;
+      top: 16px;
+      right: -4px;
+      gap: 6px;
+      list-style-type: none;
+      li img {
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
 
   &__main-ham-menu-cont {
-    display: none;
-    width: 3rem;
-
-    padding: 2.2rem 0;
-
+    position: fixed;
+    top: 16px;
+    z-index: 1001;
     button {
       background-color: transparent;
       transition: transform 1s;
@@ -126,27 +131,56 @@
   }
 
   &__sm-menu {
-    background-color: rgba($colorPrimario, 1);
-
-    position: absolute;
+    &-overlay {
+      position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    top: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    z-index: 999;
+    }
+
+    z-index: 1000;
+    padding: 50px 20px;
+    background-color: rgba($colorPrimario, 1);
+    top: 0px;
+    left: 0px;
+    width: auto;
+    border-right: 7px solid #f865319c;
+    border-end-end-radius: 150px;
+    position: absolute;
+    height: 98vh;
 
     transition: all 0.3s;
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+    &-item {
+      &:before {
+        content: "\1F537";
+      }
+
+      &:hover {
+        font-weight: bold;
+        &:before {
+          content: "\1F536";
+        }
+      }
+    }
+    &-logo {
+      max-width: 300px;
+      margin: 20px 10px 40px;
+
+    }
   }
 
-  &__sm-menu-link {
-    a {
-      display: block;
+  &__sm-menu-content {
+    ul li a {
       text-decoration: none;
-      padding: 2.5rem 3rem;
-      font-size: 1.6rem;
-      color: $colorTerciario;
+      font-size: 1.9rem;
+      color: $colorSecundario;
       text-align: right;
-      border-bottom: 1px solid $colorTerciario;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -157,11 +191,6 @@
       }
     }
 
-    &:first-child {
-      a {
-        border-top: 1px solid $colorTerciario;
-      }
-    }
   }
 
   &__sm-menu-link-last {

@@ -1,17 +1,6 @@
 .home-hero {
   color: $colorTerciario;
-  /* background: linear-gradient(to right,
-      rgba($colorCuaternario, 0.5),
-      rgba($colorCuaternario, 0.7)),
-      url(../../assets/svg/background.svg); */
-
-  background: linear-gradient(to bottom,
-      rgba($colorTerciario, 0.6),
-      rgba($colorTerciario, 0.1)),
-      url(../../assets/jpeg/F-7ZfRqbMAAUWCB.jpeg); /* 
-  background-image: url(../../assets/jpeg/F-7ZfRqbMAAUWCB.jpeg); */
-  background-size: cover; 
-  background-position: center;
+  background-color: $colorPrimario; 
   height: 100vh;
   position: relative; 
 
@@ -115,7 +104,7 @@
 }
 
 .heading-primary {
-  color: $colorPrimario;
+  color: $colorSecundario;
   font-size: 5rem;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -127,7 +116,7 @@
 }
 
 .heading-sec {
-  color: $colorPrimario;
+  color: $colorSecundario;
 
   &__mb-bg {
     margin-bottom: 3rem;
@@ -154,9 +143,9 @@
     text-align: center;
     margin-bottom: 3.5rem;
     position: relative;
-    color: $colorPrimario;
+    color: $colorSecundario;
     &--lt {
-      color: $colorPrimario;
+      color: $colorSecundario;
 
       &::after {
         content: '';
